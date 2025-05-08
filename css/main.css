@@ -7,3 +7,34 @@ body{
     text-align: center;
     margin-top: 40px ;
 }
+
+.boton {
+    display: inline-block; /* Para que el botón se pueda ajustar como un bloque en línea */
+    padding: 10px 20px; /* Espacio interior */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar la línea de bajo de los enlaces */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* El cursor cambia al hacer clic */
+  }
+  
+  .boton:hover {
+    background-color: #3e8e41; /* Color de fondo al pasar el ratón */
+  }
+
+  .contenedor-form {
+    margin: 0 auto;
+    width: 50%; /* O cualquier ancho deseado, como 600px, 800px */
+    /* Otros estilos adicionales como padding, border, etc. */
+}
+.contenedor-form input, .contenedor-form textarea, .contenedor-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+.barra-inferior {
+    border-bottom: 75px solid black; /* Grosor y tipo de borde, color */
+    width: 100%; /* Ancho de la barra */
+    height: 75px; /* Altura de la barra (opcional) */
+  }

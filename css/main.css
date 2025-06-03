@@ -1,40 +1,46 @@
 body{
     font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
 }
 #testimonial{
     background-color: rgb(133, 130, 130);
     padding: 50px 0 30px 0;
-    text-align: center;
+    text-align: center; /* Esto ya estaba y es correcto para centrar el texto dentro del testimonial */
     margin-top: 40px ;
 }
 
 .boton {
-    display: inline-block; /* Para que el botón se pueda ajustar como un bloque en línea */
-    padding: 10px 20px; /* Espacio interior */
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quitar la línea de bajo de los enlaces */
-    border-radius: 5px; /* Esquinas redondeadas */
-    cursor: pointer; /* El cursor cambia al hacer clic */
-  }
-  
-  .boton:hover {
-    background-color: #3e8e41; /* Color de fondo al pasar el ratón */
-  }
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-  .contenedor-form {
-    margin: 0 auto;
-    width: 50%; /* O cualquier ancho deseado, como 600px, 800px */
-    /* Otros estilos adicionales como padding, border, etc. */
+.boton:hover {
+    background-color: #3e8e41;
 }
-.contenedor-form input, .contenedor-form textarea, .contenedor-form button {
+
+.barra-inferior { 
+    position: fixed; /* Fija la barra en la parte inferior de la pantalla */
+    border-bottom: 75px solid black;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    height: 75px;
 }
-.barra-inferior {
-    border-bottom: 75px solid black; /* Grosor y tipo de borde, color */
-    width: 100%; /* Ancho de la barra */
-    height: 75px; /* Altura de la barra (opcional) */
-  }
+section {
+    padding: 60px 0; /* 60px arriba y abajo, 0 a los lados */
+}
+
+#header {
+    padding-top: 80px; /* Ejemplo */
+    padding-bottom: 80px;
+}
+#contact-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

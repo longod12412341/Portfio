@@ -303,23 +303,24 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <h2>Contáctame</h2>
-                    <form class="card p-4 shadow-sm" onsubmit="return validarFormulario()"> 
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-control" required>
+                        <form class="card p-4 shadow-sm" action="https://formspree.io/f/mpwrwdlw" method="POST" onsubmit="return validarFormulario()">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo electrónico:</label>
+                                    <input type="email" id="email" name="_replyto" placeholder="Tu correo electrónico" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje:</label>
+                                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." class="form-control" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo electrónico:</label>
-                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje:</label>
-                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." class="form-control" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar</button> </div>
-                    </form>
-                </div>
+                        </form>
+                    </div>
                 <div class="col-md-6 mt-4 mt-md-0"> <h2>Mi Ubicación</h2>
                     <p>Este es un mapa de mi ubicación:</p>
                     <div class="embed-responsive embed-responsive-16by9">

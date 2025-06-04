@@ -1,17 +1,142 @@
-body{
-    font-family: "Nunito", sans-serif;
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: "Nunito", sans-serif; /* Tu fuente de Google Fonts */
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 400; /* Peso de la fuente */
+    font-size: 16px; /* Tamaño de fuente base */
     font-style: normal;
-}
-#testimonial{
-    background-color: rgb(133, 130, 130);
-    padding: 50px 0 30px 0;
-    text-align: center; /* Esto ya estaba y es correcto para centrar el texto dentro del testimonial */
-    margin-top: 40px ;
+    padding-top: 56px; /* AÑADIDO: Margen superior para compensar la altura de la navbar fija de Bootstrap (aprox. 56px) */
 }
 
+/* Estilos generales para todas las secciones */
+/* Este padding global se aplica a *todas* las etiquetas <section>, incluyendo tus barras. */
+section {
+    padding: 60px 0; /* 60px de padding arriba y abajo, 0 a los lados */
+}
+
+/* Estilos de la primera barra: Tu presentación personal ("Sobre Mí") */
+/* Originalmente '#testimonial', se cambió a '#about-me' para ser un ID único y más descriptivo. */
+#about-me { 
+    background-color: #343a40; /* Color de fondo oscuro de la barra */
+    text-align: center; /* Centra el texto y los elementos internos (como los iconos) */
+    margin-top: 40px; /* Margen superior para separarla de la sección 'header' */
+    /* NOTA: El padding ya lo recibe de la regla general 'section {}' */
+}
+
+/* Estilos de la segunda barra: El separador de proyectos (la barra "full-width") */
+/* Este ID es único y se usa en la sección que NO contiene un 'container' interno. */
+#barra-separadora-proyectos { 
+    background-color: #495057; /* Un gris un poco diferente (o el mismo #343a40 si prefieres consistencia) */
+    text-align: center; /* Centra el texto dentro de esta barra full-width */
+    margin-top: 30px; /* Margen superior para separarla de la sección anterior (tu barra 'about-me') */
+    /* NOTA: El padding también lo recibe de la regla general 'section {}'.
+       Si quieres que esta barra sea más delgada, podrías añadir un 'padding: 30px 0;' aquí para sobrescribir el general. */
+}
+
+/* Estilos para el header (tu sección principal "Home") */
+#header {
+    /* 'calc(80px + 56px)' asegura que el contenido no quede debajo de la navbar fija. */
+    padding-top: calc(80px + 56px); 
+    padding-bottom: 80px;
+    /* Puedes añadir un background-color o background-image aquí si quieres que el header tenga un fondo */
+}
+
+/* Estilos para la sección de Contacto */
+#contact-section {
+    /* El padding ya viene de la regla general 'section {}' */
+    padding-top: 60px; /* Redefine el padding superior si quieres uno específico para contacto */
+    padding-bottom: 60px; /* Redefine el padding inferior si quieres uno específico para contacto */
+}
+
+/* Estilos para los textos en blanco */
+/* Aunque Bootstrap tiene 'text-white', esta regla asegura que se aplique correctamente. */
+.text-white {
+    color: white !important; /* '!important' asegura que esta regla tenga prioridad */
+}
+
+/* Estilos para los enlaces/iconos sociales (los círculos con los iconos) */
+.social-link {
+    display: inline-block; /* Permite que el elemento tenga un ancho y alto definidos y que sea un círculo */
+    width: 4rem; /* Ancho del círculo */
+    height: 4rem; /* Alto del círculo */
+    line-height: 4rem; /* Centra verticalmente el icono dentro del círculo */
+    font-size: 1.5rem; /* Tamaño del icono */
+    text-align: center; /* Centra horizontalmente el icono */
+    color: #fff; /* Color del icono (blanco) */
+    background-color: #20c997; /* Color de fondo de los círculos (verde/teal de acento) */
+    border-radius: 50%; /* Hace que el elemento sea un círculo perfecto */
+    transition: all 0.3s ease-in-out; /* Animación suave al pasar el mouse */
+    margin: 0 0.5rem; /* Espaciado horizontal entre los iconos */
+}
+
+/* Estilo para el hover de los iconos sociales */
+.social-link:hover {
+    background-color: #17a2b8; /* Cambia el color de fondo al pasar el mouse (un azul más claro) */
+    text-decoration: none; /* Quita el subrayado que los enlaces puedan tener por defecto */
+}
+
+/* Ajustes para el footer (pie de página) */
+footer .social-icons {
+    margin-top: 15px; /* Añade un pequeño margen superior a la lista de iconos en el footer */
+}
+
+/* Estilos para la clase '.boton' (presente en tu CSS original, aunque no se usa en el HTML actual) */
+.boton { 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #3e8e41;
+}
+
+/* Estilos para la clase '.barra-inferior' (presente en tu CSS original, aunque no se usa en el HTML actual) */
+.barra-inferior { 
+    position: fixed; /* Fija la barra en la parte inferior de la pantalla */
+    border-bottom: 75px solid black;
+    width: 100%;
+    height: 75px;
+}
+
+
+
+footer .social-icons { /* O footer .tech-logos si actualizaste el HTML del footer */
+    margin-top: 15px; /* Añade un pequeño margen superior a la lista de iconos en el footer */
+}
+
+
+/* --- NUEVOS ESTILOS PARA LOS LOGOS DE TECNOLOGÍA --- */
+/* Es importante añadir estos estilos para controlar el tamaño y espaciado de los nuevos logos. */
+
+/* Contenedor de la lista de logos de tecnología (la nueva clase que agregamos en el HTML) */
+.tech-logos .list-inline-item {
+    margin: 0 0.75rem; /* Espaciado horizontal entre cada logo */
+}
+
+/* Estilos para las imágenes de los logos de tecnología */
+.tech-logo {
+    width: 50px; /* Tamaño de los logos (ajusta según tu preferencia, 50px es un buen inicio) */
+    height: auto; /* Mantiene la proporción de la imagen */
+    /* Si quieres un efecto sutil en los logos, puedes descomentar estos: */
+    /* opacity: 0.9; */ /* Ligeramente transparentes */
+    /* transition: opacity 0.3s ease-in-out; */ /* Transición suave si añades hover o cambio de opacidad */
+    /* filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); */ /* Sombra suave para que destaquen */
+}
+
+/* Si más adelante quisieras un efecto de HOVER (actualmente no lo quieres, pero para referencia): */
+/* .tech-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+} */
+
+
+/* Estilos para la clase '.boton' (presente en tu CSS original, aunque no se usa en el HTML actual) */
 .boton {
     display: inline-block;
     padding: 10px 20px;
@@ -26,21 +151,53 @@ body{
     background-color: #3e8e41;
 }
 
-.barra-inferior { 
+/* Estilos para la clase '.barra-inferior' (presente en tu CSS original, aunque no se usa en el HTML actual) */
+.barra-inferior {
     position: fixed; /* Fija la barra en la parte inferior de la pantalla */
     border-bottom: 75px solid black;
     width: 100%;
     height: 75px;
 }
-section {
-    padding: 60px 0; /* 60px arriba y abajo, 0 a los lados */
+
+
+
+#habilidades {
+    background-color: #f8f9fa; /* Un color de fondo claro para que resalte del oscuro anterior */
+    color: #343a40; /* Color de texto oscuro para que se lea bien sobre el fondo claro */
 }
 
-#header {
-    padding-top: 80px; /* Ejemplo */
-    padding-bottom: 80px;
+/* Contenedor de cada habilidad (nombre, porcentaje, barra) */
+.skill-item {
+    margin-bottom: 1.5rem; /* Espacio entre cada habilidad */
 }
-#contact-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+
+/* Estilos para el nombre de la habilidad y el porcentaje */
+.skill-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #495057; /* Un gris oscuro para el texto */
+}
+
+.skill-percentage {
+    font-weight: bold;
+    color: #20c997; /* Color de acento para el porcentaje */
+}
+
+/* Contenedor exterior de la barra de progreso (el 'riel') */
+.progress-bar-container {
+    width: 100%;
+    height: 10px; /* Altura de la barra */
+    background-color: #e9ecef; /* Color de fondo del riel (gris claro) */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el relleno no se salga */
+    margin-top: 5px; /* Pequeño margen entre el texto y la barra */
+}
+
+/* Elemento interior de la barra de progreso (el 'relleno') */
+.progress-bar-fill {
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    background-color: #20c997; /* Color de relleno (el acento) */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 0%; /* INICIA EN 0% - CRUCIAL PARA LA ANIMACIÓN */
+    transition: width 1.5s ease-in-out; /* Transición suave cuando JS cambie el 'width' */
 }

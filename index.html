@@ -1,156 +1,362 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Portafolio de Leandro Longo - Desarrollador Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <! -- BOOSTRAP 5 -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/main.css">
+    
     <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> 
         <div class="container">
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="#">Leandro Longo</a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto"> <li class="nav-item">
+                        <a class="nav-link" href="#header">Home</a> </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="proximamente.html">Projectos</a>
-                    </li>
+                        <a class="nav-link" href="#barra-separadora-proyectos">Proyectos</a> </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre mi</a>
-                    </li>
+                        <a class="nav-link" href="#habilidades">Habilidades</a> </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
-                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">Sobre Mí</a> </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contacto</a> </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <header id="header">
         <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="hearder-content-left">
+            <div class="row align-items-center"> <div class="col-md-6">
+                    <div class="header-content-left">
                         <img src="img/manager.jpg" style="width: 100%; height: auto;" alt="Manager">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="header-content-right">
-                        <h1 class="display-4">Bienvenido, Mi nombre es Leandro Longo</h1>
-                        <p class="mt-5">Este un mi portafolio web donde puedes ver proyectos donde utilizo diferentes tecnologias.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Read More</a>
+                        <h1 class="display-4">Desarrollador Web Full Stack</h1> <p class="mt-4"> ¡Hola! Soy Leandro Longo, estoy altamente interesado en ampliar mis conocimientos en el campo de la programación, con el propósito de seguir creciendo profesionalmente y perfeccionando mis habilidades.
+                            Me motiva la búsqueda constante de aprendizaje y el desarrollo de nuevas competencias que me permitan mejorar como profesional en esta área. 🧠💡
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section id="testimonial">
-        <div class="container">
-            <p class="mb-2">
-                Hola me presento, soy docente y estudiante de la tecnicatura en tecnologia web, trabajo con tecnologias como Python, SQL, Java Y algunos frameworks como Django, React, entre otras.
+
+    <section id="about-me" class="py-5"> 
+        <div class="container"> <p class="mb-4 text-white"> A continuacion dejo tecnologías con las que e trabajado como Python, SQL, Java y algunos frameworks como Django, React, entre otras.
             </p>
-            <p class="h4">- Longo Leandro</p>
+            <ul class="list-inline tech-logos mt-3"> <li class="list-inline-item">
+                    <img src="img/python-logo.png" alt="Python Logo" class="tech-logo">
+                </li>
+                <li class="list-inline-item">
+                    <img src="img/sql-logo.png" alt="SQL Logo" class="tech-logo">
+                </li>
+                <li class="list-inline-item">
+                    <img src="img/java-logo.png" alt="Java Logo" class="tech-logo">
+                </li>
+                <li class="list-inline-item">
+                    <img src="img/django-logo.png" alt="Django Logo" class="tech-logo">
+                </li>
+                 <li class="list-inline-item">
+                    <img src="img/react-logo.png" alt="React Logo" class="tech-logo">
+                </li>
+            </ul>
         </div>
     </section>
-    <section>
+
+
+    <section id="habilidades" class="py-5 bg-light">
         <div class="container">
-            <div class="row mt-5">
+            <h2 class="text-center mb-5">Mis Habilidades Técnicas y Personales</h2>
+
+            <div class="row">
+                <div class="col-lg-6 mx-auto"> <h3 class="mb-3">Tecnologías y Frameworks</h3>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Python Data Science</span>
+                            <span class="skill-percentage">85%</span> </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="85%"></div> 
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Django Framework</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="65%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Golang</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">AWS (DynamoDB)</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Angular</span>
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Control de Versiones (Git)</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-percentage">50%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="50%"></div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-5 mb-3">Habilidades Blandas y Generales</h3>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Inglés Intermedio</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Manejo de Paquete Office</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Sistemas Operativos (Windows y Linux)</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Metodologías Ágiles</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Proactividad</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span class="skill-name">Trabajo en Equipo</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" data-progress="95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="barra-separadora-proyectos" class="py-4"> 
+        <p class="text-white mb-0"> ¡Explora mis proyectos destacados a continuación!
+        </p>
+    </section>
+
+    <section id="proyecto-ejemplo-1"> <div class="container">
+            <div class="row mt-5 align-items-center"> <div class="col-md-6">
+                    <div class="info-left">
+                        <img src="img/control.jpg" style="width: 100%;" alt="Imagen del Proyecto 1">
+                    </div>
+                </div>
+                <div class="col-md-6 my-auto"> <div class="info-right">
+                        <h2>Sistema de Gestión de Inventario Inteligente</h2> <p>Desarrollo de una aplicación web robusta para la gestión eficiente de inventarios, permitiendo el seguimiento en tiempo real de productos, automatización de pedidos a proveedores y control de stock. Incluye funcionalidades para entradas/salidas, reportes y alertas personalizadas.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Más detalles</a> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyecto-ejemplo-2">
+        <div class="container">
+            <div class="row mt-5 align-items-center">
+                <div class="col-md-6 order-md-2"> 
+                    <div class="info-right">
+                        <img src="img/control.jpg" style="width: 100%;" alt="Imagen del Proyecto 2">
+                    </div>
+                </div>
+                <div class="col-md-6 my-auto order-md-1"> 
+                    <div class="info-left">
+                        <h2>Plataforma de Tareas y Seguimiento Ágil</h2>
+                        <p>Creación de una herramienta web que facilita la asignación, seguimiento y gestión de tareas y proyectos, optimizando el flujo de trabajo de equipos. Incluye funcionalidades para checklist, asignación de responsables, fechas límite y generación de informes de progreso.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Más detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyecto-ejemplo-3">
+        <div class="container">
+            <div class="row mt-5 align-items-center">
                 <div class="col-md-6">
                     <div class="info-left">
-                        <img src="img/control.jpg" style=" width: 100%;" alt="control_imagen">
+                        <img src="img/control.jpg" style="width: 100%;" alt="Imagen del Proyecto 3">
                     </div>
                 </div>
                 <div class="col-md-6 my-auto">
                     <div class="info-right">
-                        <h2>lorem </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Read More</a>
+                        <h2>Soluciones Web para Logística y Operaciones</h2>
+                        <p>Aplicando tecnologías web para resolver desafíos complejos en logística y operaciones, desde la optimización de rutas hasta la gestión de activos y la coordinación de equipos. Mi objetivo es transformar procesos manuales en sistemas digitales eficientes.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Más detalles</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="contact-section" class="py-5"> <div class="container">
-      <div>
-        <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <h2>Contáctame</h2>
-                        <form class="card" onsubmit="return validarFormulario()">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre:</label>
-                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Correo electrónico:</label>
-                                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="mensaje" class="form-label">Mensaje:</label>
-                                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." class="form-control" required></textarea>
-                                </div>
-                                <button class="btn btn-primary" >Enviar</button>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2>Contáctame</h2>
+                    <form class="card p-4 shadow-sm" onsubmit="return validarFormulario()"> 
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-control" required>
                             </div>
-                        </form>
-                    </div>
-                <div class="col-md-6"> <h2>Mi Ubicación</h2>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button> </div>
+                    </form>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0"> <h2>Mi Ubicación</h2>
                     <p>Este es un mapa de mi ubicación:</p>
-                    <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1638.7785143751448!2d-58.815823995251804!3d-34.76674990408721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBernado%20houssay%20596%20Marcos%20Paz!5e0!3m2!1ses-419!2sar!4v1746731570195!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.437703816518!2d-58.94825928822002!3d-34.75704947281313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc7291a1005273%3A0x2a1a4b1c8f1f7d7!2sMarcos%20Paz%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1717466547631!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-dark text-white text-center py-3 mt-5"> <div class="container">
-            <p class="mb-0">&copy; 2025. Desarrollado por Leandro Longo.</p>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5"> <div class="container">
+            <p class="mb-2">© 2025. Desarrollado por Leandro Longo.</p>
+            <ul class="list-inline social-icons"> 
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle" href="https://www.instagram.com/longo_longanizado?igsh=MThsbnk1ZDBqeWkyMA==" target="_blank" title="Instagram de Leandro Longo"><i class="icon-social-instagram"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle" href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn de Leandro Longo"><i class="icon-social-linkedin"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle" href="https://github.com/LeandroLongo" target="_blank" title="GitHub de Leandro Longo"><i class="icon-social-github"></i></a>
+                </li>
+            </ul>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+<script>
+        // Ejemplo de uso de ScrollReveal 
+        ScrollReveal().reveal('.header-content-left', { delay: 300, origin: 'left' });
+        ScrollReveal().reveal('.header-content-right', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.info-left', { delay: 200, origin: 'left', distance: '50px' });
+        ScrollReveal().reveal('.info-right', { delay: 200, origin: 'right', distance: '50px' });
+        ScrollReveal().reveal('#about-me', { delay: 100, origin: 'bottom', distance: '20px' });
     </script>
-    <script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        function validarFormulario() {
-      var nombre = document.getElementById('nombre').value;
-      var email = document.getElementById('email').value;
-      var mensaje = document.getElementById('mensaje').value;
 
-      if (nombre.trim() == '' || email.trim() == '' || mensaje.trim() == '') {
-        alert('Por favor, complete todos los campos.');
-        return false;
-      }
 
-      // Validar el formato del correo electrónico
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Por favor, introduzca una dirección de correo electrónico válida.');
-        return false;
-      }
-
-      // Si todo está bien, se puede enviar el formulario
-      alert('¡Formulario enviado con éxito!');
-      return true;
-    }
-
-    </script>
 </body>
 </html>

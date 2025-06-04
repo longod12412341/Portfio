@@ -120,12 +120,19 @@ footer .social-icons { /* O footer .tech-logos si actualizaste el HTML del foote
 
 /* Estilos para las imágenes de los logos de tecnología */
 .tech-logo {
-    width: 50px; /* Tamaño de los logos (ajusta según tu preferencia, 50px es un buen inicio) */
-    height: auto; /* Mantiene la proporción de la imagen */
-    /* Si quieres un efecto sutil en los logos, puedes descomentar estos: */
-    /* opacity: 0.9; */ /* Ligeramente transparentes */
-    /* transition: opacity 0.3s ease-in-out; */ /* Transición suave si añades hover o cambio de opacidad */
-    /* filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); */ /* Sombra suave para que destaquen */
+    width: 50px; /* Ancho fijo para todos los logos */
+    height: 50px; /* Alto fijo para todos los logos (igual que el ancho para hacerlos cuadrados) */
+    object-fit: contain; /* CRUCIAL: Escala la imagen para que encaje dentro de las dimensiones, manteniendo su proporción y sin recortarse. Si quieres que cubra el espacio y se recorte si es necesario, usa 'cover'. */
+    
+    /* Estos son opcionales, como hablamos antes, si quieres efectos visuales: */
+    /* opacity: 0.9; */
+    /* transition: opacity 0.3s ease-in-out; */
+    /* filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); */
+    
+    /* Si los logos tienen fondos que quieres que se mezclen con el fondo oscuro, */
+    /* podrías añadir un background-color al contenedor o a la imagen si es PNG con transparencia. */
+    background-color: rgba(255, 255, 255, 0.2); /* Un fondo semitransparente para los logos */
+    border-radius: 5px; /* Bordes redondeados para un efecto más suave */
 }
 
 /* Si más adelante quisieras un efecto de HOVER (actualmente no lo quieres, pero para referencia): */

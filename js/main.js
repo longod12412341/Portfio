@@ -1,79 +1,111 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Código para desplazamiento suave de los enlaces de navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Previene el comportamiento por defecto del ancla
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault(); // Previene el comportamiento por defecto del ancla
+            const targetId = this.getAttribute('href'); // Obtiene el ID del elemento de destino
+            
+            // Si el enlace es solo '#', se desplaza al top de la página
+            if (targetId === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Calcula la altura de la navbar para evitar que el contenido quede oculto
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    // Calcula la posición de desplazamiento ajustando por la altura de la navbar
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
-                const targetId = this.getAttribute('href'); // Obtiene el ID del elemento de destino
-                
-                // Si el enlace es solo '#', se desplaza al top de la página
-                if (targetId === '#') {
                     window.scrollTo({
-                        top: 0,
+                        top: targetPosition,
                         behavior: 'smooth'
                     });
-                } else {
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Calcula la altura de la navbar para evitar que el contenido quede oculto
-                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                        // Calcula la posición de desplazamiento ajustando por la altura de la navbar
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
                 }
-            });
+            }
         });
+    });
 
-        function validarFormulario() {
-            var nombre = document.getElementById('nombre').value;
-            var email = document.getElementById('email').value;
-            var mensaje = document.getElementById('mensaje').value;
-
-            // Validación de campos vacíos
-            if (nombre.trim() == '' || email.trim() == '' || mensaje.trim() == '') {
-                alert('Por favor, complete todos los campos.');
-                return false; // Evita que el formulario se envíe
+    // Inicialización y configuración de ScrollReveal
+    // (Mantengo tus animaciones existentes y agrego las sugeridas)
+    ScrollReveal().reveal('.header-content-left', { delay: 300, origin: 'left' });
+    ScrollReveal().reveal('.header-content-right', { delay: 300, origin: 'right' });
+    ScrollReveal().reveal('.info-left', { delay: 200, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('.info-right', { delay: 200, origin: 'right', distance: '50px' });
+    ScrollReveal().reveal('#about-me', { delay: 100, origin: 'bottom', distance: '20px' });
+    ScrollReveal().reveal('#barra-separadora-proyectos', { delay: 100, origin: 'bottom' });
+    ScrollReveal().reveal('#contact-section', { delay: 100, origin: 'bottom' });
+    ScrollReveal().reveal('footer', { delay: 100, origin: 'bottom' });
+    ScrollReveal().reveal('#habilidades h2', { delay: 100, origin: 'top' });
+    ScrollReveal().reveal('#habilidades h3', { delay: 150, origin: 'top' });
+    
+    // Configuración para las barras de progreso usando ScrollReveal
+    ScrollReveal().reveal('.skill-item', {
+        delay: 100,       // Pequeño retraso para cada elemento
+        distance: '0px',  // No mover el elemento, solo aplicar el 'afterReveal'
+        opacity: 1,       // Mantener la opacidad (no queremos que aparezcan de la nada)
+        easing: 'ease-in-out',
+        interval: 50,     // Pequeño retraso entre la animación de cada skill-item
+        afterReveal: (el) => {
+            // Esta función se ejecuta una vez que el elemento 'skill-item' es visible
+            const fill = el.querySelector('.progress-bar-fill');
+            // Leer el porcentaje del atributo data-progress del div .progress-bar-fill
+            const percentage = fill ? fill.getAttribute('data-progress') : null;
+            if (fill && percentage) {
+                fill.style.width = percentage; // Aplicar el ancho real, lo que dispara la transición
             }
+        }
+    });
 
-            // Validación del formato del correo electrónico usando una expresión regular
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, introduzca una dirección de correo electrónico válida.');
-                return false; // Evita que el formulario se envíe
-            }
+    // Opcional: Asegúrate de que las barras empiecen en 0% al cargar la página
+    // Esto es útil para reiniciar la animación si se vuelve a la sección.
+    document.querySelectorAll('.progress-bar-fill').forEach(fill => {
+        fill.style.width = '0%';
+    });
 
-            // Si todas las validaciones son exitosas
-            alert('¡Formulario enviado con éxito!');
-            return true; // Permite que el formulario se envíe
+    // Función de validación de formulario (tu código modificado)
+    window.validarFormulario = function() {
+        var nombre = document.getElementById('nombre').value;
+        var email = document.getElementById('email').value;
+        var mensaje = document.getElementById('mensaje').value;
+
+        // Validación de campos vacíos
+        if (nombre.trim() == '' || email.trim() == '' || mensaje.trim() == '') {
+            alert('Por favor, complete todos los campos.');
+            return false; // Evita que el formulario se envíe
         }
 
-     
-        document.addEventListener('DOMContentLoaded', () => {
-            // Inicializa ScrollReveal (ajusta las opciones si quieres)
-            // Aquí puedes añadir otras reglas si quieres animar más elementos
-            ScrollReveal().reveal('.skill-item', {
-                delay: 100,       // Pequeño retraso para cada elemento
-                distance: '0px',  // No mover el elemento, solo aplicar el 'afterReveal'
-                opacity: 1,       // Mantener la opacidad (no queremos que aparezcan de la nada)
-                easing: 'ease-in-out',
-                interval: 50,     // Pequeño retraso entre la animación de cada skill-item
-                afterReveal: (el) => {
-                    // Esta función se ejecuta una vez que el elemento 'skill-item' es visible
-                    const fill = el.querySelector('.progress-bar-fill');
-                    const percentage = fill.getAttribute('data-progress'); // Leer el porcentaje del atributo data-progress
-                    if (fill && percentage) {
-                        fill.style.width = percentage; // Aplicar el ancho real, lo que dispara la transición
-                    }
-                }
-            });
+        // Validación del formato del correo electrónico usando una expresión regular
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Por favor, introduzca una dirección de correo electrónico válida.');
+            return false; // Evita que el formulario se envíe
+        }
 
-            // Opcional: Asegúrate de que las barras empiecen en 0% al cargar la página
-            // Esto es redundante si ya lo tienes en CSS, pero no hace daño.
-            document.querySelectorAll('.progress-bar-fill').forEach(fill => {
-                fill.style.width = '0%';
-            });
-        });
+        // Si todas las validaciones son exitosas
+        alert('¡Formulario enviado con éxito!');
+        return true; // Permite que el formulario se envíe
+    };
+});
+
+// Este bloque de código está fuera del DOMContentLoaded y no se utiliza directamente
+// con la estructura actual de las barras de progreso que usan data-progress.
+// Lo mantengo aquí por si tenías una lógica específica para esto.
+// Si no lo usas, puedes considerarlo para eliminarlo en el futuro para limpiar el código.
+const pythonBar = document.querySelector('.technical-skills-section .progress-bar[data-skill="python"]'); // Asumiendo un atributo data-skill
+if (pythonBar) {
+    pythonBar.style.width = '85%'; // Esto seguirá funcionando perfectamente
+}
+document.body.addEventListener('click', function(event) {
+        // Verificar si el elemento clicado tiene la clase 'btn-detalles-proyecto'
+        // 'matches()' es un método útil para esto.
+        if (event.target.matches('.btn-detalles-proyecto')) {
+            event.preventDefault(); // Evita el comportamiento por defecto del enlace
+            // Simplemente un alert genérico.
+            const botonClicado = event.target;
+            alert('¡Esta función está en desarrollo!');
+        }
+    });

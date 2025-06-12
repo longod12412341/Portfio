@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Inicialización y configuración de ScrollReveal
-    // (Mantengo tus animaciones existentes y agrego las sugeridas)
     ScrollReveal().reveal('.header-content-left', { delay: 300, origin: 'left' });
     ScrollReveal().reveal('.header-content-right', { delay: 300, origin: 'right' });
     ScrollReveal().reveal('.info-left', { delay: 200, origin: 'left', distance: '50px' });
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ScrollReveal().reveal('.skill-item', {
         delay: 100,       // Pequeño retraso para cada elemento
         distance: '0px',  // No mover el elemento, solo aplicar el 'afterReveal'
-        opacity: 1,       // Mantener la opacidad (no queremos que aparezcan de la nada)
+        opacity: 1,       // Mantener la opacidad 
         easing: 'ease-in-out',
         interval: 50,     // Pequeño retraso entre la animación de cada skill-item
         afterReveal: (el) => {
@@ -60,13 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Opcional: Asegúrate de que las barras empiecen en 0% al cargar la página
-    // Esto es útil para reiniciar la animación si se vuelve a la sección.
+    // Configuración de ScrollReveal para las secciones de habilidades técnicas
     document.querySelectorAll('.progress-bar-fill').forEach(fill => {
         fill.style.width = '0%';
     });
 
-    // Función de validación de formulario (tu código modificado)
+    // Función de validación de formulario
     window.validarFormulario = function() {
         var nombre = document.getElementById('nombre').value;
         var email = document.getElementById('email').value;
@@ -90,11 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return true; // Permite que el formulario se envíe
     };
 });
-
-// Este bloque de código está fuera del DOMContentLoaded y no se utiliza directamente
-// con la estructura actual de las barras de progreso que usan data-progress.
-// Lo mantengo aquí por si tenías una lógica específica para esto.
-// Si no lo usas, puedes considerarlo para eliminarlo en el futuro para limpiar el código.
+// Este código es para manejar el clic en los botones de detalles de proyecto.
+// con la estructura actual de las barras de progreso que usan data-progress
 const pythonBar = document.querySelector('.technical-skills-section .progress-bar[data-skill="python"]'); // Asumiendo un atributo data-skill
 if (pythonBar) {
     pythonBar.style.width = '85%'; // Esto seguirá funcionando perfectamente

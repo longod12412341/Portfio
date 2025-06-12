@@ -219,7 +219,7 @@ footer .social-icons {
 }
 
 /* Media Queries para ajustar el diseño en pantallas pequeñas si es necesario (Bootstrap ya hace mucho) */
-@media (max-width: 767.98px) { /* Para pantallas más pequeñas que 'md' (tablets y móviles) */
+@media (max-width: 767.98px) { /* Para pantallas más pequeñas (tablets y móviles) */
     .header-content-left,
     .header-content-right,
     .info-left,
@@ -233,8 +233,8 @@ footer .social-icons {
         order: 0; /* Asegura que el orden sea el mismo en móviles */
     }
 
-    /* Ajuste para el orden de las columnas en proyectos */
+    /* Ajusta el orden de las columnas en la sección de proyectos */
     #proyecto-ejemplo-2 .col-md-6 {
-        order: initial !important; /* Desactiva el order-md-2 en móviles */
+        order: initial !important; /* Resetea el orden para que no se aplique el orden de Bootstrap */ 
     }
 }
